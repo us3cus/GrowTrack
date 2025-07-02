@@ -7,12 +7,14 @@
       </div>
       <div class="flex-1 flex justify-end space-x-8">
         <a href="#about" class="text-gray-600 hover:text-primary-600 transition">О нас</a>
-        <a href="#contact" class="text-gray-600 hover:text-primary-600 transition">Связаться</a>
+        <a @click="panel" class="text-gray-600 hover:text-primary-600 transition">Войти</a>
         <a href="#privacy" class="text-gray-600 hover:text-primary-600 transition">Политика конфиденциальности</a>
       </div>
     </div>
   </footer>
 </template>
 <script setup lang="ts">
-// Здесь можно добавить логику, если потребуется
+function panel() {
+    navigateTo({ path: '/view' })
+}
 </script>
