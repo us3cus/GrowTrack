@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import axios from 'axios';
+import api from '~/utils/axios';
 
 const password = ref('');
 const accessGranted = ref(false);
@@ -23,7 +23,7 @@ const checkPassword = () => {
 const fetchResults = async () => {
   loading.value = true;
   try {
-    const res = await axios.get('http://localhost:3001/api/result/');
+    const res = await api.get('/api/result/');
     results.value = res.data;
   } catch (e) {
     error.value = 'Ошибка загрузки данных';
@@ -35,7 +35,7 @@ const fetchResults = async () => {
 const deleteResult = async (id: string) => {
   if (!confirm('Удалить результат?')) return;
   try {
-    await axios.delete(`http://localhost:3001/api/result/${id}`);
+    await api.delete(`/api/result/${id}`);
     results.value = results.value.filter(r => r._id !== id);
   } catch (e) {
     alert('Ошибка удаления');

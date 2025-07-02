@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { ref } from 'vue';
-import axios from 'axios';
+import api from '~/utils/axios';
 
 const name = ref('');
 const age = ref('');
@@ -54,7 +54,7 @@ const handleSubmit = async () => {
     // Сохраняем в localStorage
     localStorage.setItem('growtrack-user', JSON.stringify(payload));
           // Отправляем POST-запрос через axios
-      const res = await axios.post('http://localhost:3001/api/send-result', payload, {
+      const res = await api.post('/api/send-result', payload, {
       headers: { 'Content-Type': 'application/json' }
     });
     if (res.status === 200) {
