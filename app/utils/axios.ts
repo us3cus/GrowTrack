@@ -1,10 +1,10 @@
 import axios from 'axios';
 
 const api = axios.create({
-  baseURL: 'https://api.temirlantenizbayev.ru',
+  baseURL: 'https://temirlantenizbayev.ru',
   headers: {
     'Content-Type': 'application/json',
   },
 });
 
-export default api; 
+export default api;
