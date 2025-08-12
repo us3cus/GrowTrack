@@ -1,75 +1,24 @@
-# Nuxt UI Starter
+GrowTrack — это система мониторинга и аналитики для сельского хозяйства, разработанная для отслеживания состояния посевов и управления агропроцессами.
+Приложение собирает данные с дронов, сенсоров и спутниковых снимков, обрабатывает их и предоставляет удобный интерфейс для анализа.
 
-Look at [Nuxt docs](https://nuxt.com/docs/getting-started/introduction) and [Nuxt UI docs](https://ui.nuxt.com) to learn more.
+Функционал:
 
-## Setup
+    Загрузка и отображение NDVI и других мультиспектральных карт
 
-Make sure to install the dependencies:
+    Ведение базы полей и посевов
 
-```bash
-# npm
-npm install
+    Мониторинг состояния растений в динамике
 
-# pnpm
-pnpm install
+    Визуализация данных в виде карт и графиков
 
-# yarn
-yarn install
+    Экспорт аналитических отчётов
 
-# bun
-bun install
-```
+Технологии:
 
-## Development Server
+    Backend: FastAPI / NestJS (в зависимости от модуля), PostgreSQL, MongoDB
 
-Start the development server on `http://localhost:3000`:
+    Frontend: Nuxt.js, Tailwind CSS
 
-```bash
-# npm
-npm run dev
+    Интеграции: API для обработки изображений, работа с геоданными
 
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+    Деплой: Docker, Nginx, PM2
